@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5 by VijayN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- write up section -->
+    <div class="container-fluid text-center">
+      <h1>Bootstrap buttons</h1>
+      <h3>dark button</h3>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <h3>Dark outline button</h3>
+      <button type="button" class="btn btn-outline-dark">Dark</button>
+    </div>
+
+    <!-- cards section -->
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <!--  team member -->
+        <div class="col-md-6 col-lg-3 my-auto">
+          <div class="card">
+            <img
+              src="./images/card_image_1.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Headphone 1</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Excepturi reiciendis aspernatur minima dolorum error similique
+                ipsam hic, quasi fuga ea!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 my-auto">
+          <div class="card">
+            <img
+              src="./images/card_image_2.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Headphone 2</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Excepturi reiciendis aspernatur minima dolorum error similique
+                ipsam hic, quasi fuga ea!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 my-auto">
+          <div class="card">
+            <img
+              src="./images/card_image_3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Headphone 3</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Excepturi reiciendis aspernatur minima dolorum error similique
+                ipsam hic, quasi fuga ea!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 my-auto">
+          <div class="card">
+            <img
+              src="./images/card_image_4.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Headphone 4</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Excepturi reiciendis aspernatur minima dolorum error similique
+                ipsam hic, quasi fuga ea!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide container my-5"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./images/carousel_img_2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/carousel_img_1.jpg"
+            class="d-block active w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/carousel_img_3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/carousel_img_4.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
