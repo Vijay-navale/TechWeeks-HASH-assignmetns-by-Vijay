@@ -1,0 +1,25 @@
+
+body{
+    background: #ccc;
+}
+.name{
+    font-size: 1.7rem;
+}
+.header_img{
+    background: url(./images/header_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+#about{
+    margin-top: -200px;
+}
+#about .fab {
+    color: #b7db13;
+}
+#about .fab:hover {
+    color: #ffffff;
+}
+#progress{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)) ,url(./images/header_img.jpg)center/cover no-repeat fixed;
+}
