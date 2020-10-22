@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd solution by VijayN</title>
+</head>
+<body>
+    <form>
+        <label>Enter a Number:-</label>
+        <input type="text" class="input">
+        <button style="display: block;" class="button">Submit</button>
+    </form>
+    <h3 class="h3"></h3>
+    <script>
+      
+        const checkEvenOdd = (e) => {
+            e.preventDefault();
+
+            let inputNumber = document.querySelector('.input').value
+            const showAns = document.querySelector('.h3'); 
+           if(inputNumber > 0){
+                if(inputNumber % 2 === 0){
+                    console.log(`${inputNumber} is even number`);
+                    showAns.textContent = `${inputNumber} is even number`
+
+                }else{
+                    console.log(`${inputNumber} is odd number`);
+                    showAns.textContent = `${inputNumber} is odd number`
+                }
+           }else{
+               console.log(`Please enter a numbers which is greater than 0`);
+               showAns.textContent = `Please enter a numbers which is greater than 0`;
+           };
+           document.querySelector('.input').value = '';
+        };
+        const submitButton = document.querySelector('.button')
+        submitButton.addEventListener('click', checkEvenOdd);
+    </script>
+</body>
+</html>
