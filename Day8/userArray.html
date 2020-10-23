@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Array and get cubes</title>
+    <style>
+      body {
+        background-color: #353434;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+      button {
+        margin: 0.8rem;
+        padding: 0.35rem 1.5rem;
+        color: #fff;
+        background-color: hsl(180, 1%, 17%);
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ffffff;
+        color: #000000;
+        border: 3px solid #22e9df;
+        border: 3px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-content">
+        <h1>
+          Put a number to create array of that number and filter out to get
+          array of cubes.
+        </h1>
+        <form>
+          <div class="input1">
+            <label>Enter number:-</label>
+            <input type="text" class="input" />
+          </div>
+          <button class="btn">Submit</button>
+          <button class="btn2">Get filtered array with cube</button>
+        </form>
+        <h3 class="h3"></h3>
+        <h3 class="h3_2"></h3>
+      </div>
+    </div>
+
+    <script>
+      let arrOfNum = [];
+      let newArr, cubesArr;
+      const createArray = (e) => {
+        e.preventDefault();
+        let inputNum = document.querySelector('.input').value;
+        const h3 = document.querySelector('.h3');
+        if (inputNum !== '') {
+          if (inputNum >= 0) {
+            arrOfNum.push(parseInt(inputNum));
+            console.log(arrOfNum);
+
+            // filtering the array
+            newArr = arrOfNum.filter((number) => number % 2 !== 0);
+            console.log(newArr);
+
+            // cubes of filtered array
+            cubesArr = newArr.map((number) => {
+              return Math.pow(number, 3);
+            });
+            console.log(cubesArr);
+
+            // cubesArr = arrOfNum
+            //   .filter((number) => number % 2 !== 0)
+            //   .map((number) => {
+            //     return Math.pow(number, 3);
+            //   });
+            console.log(cubesArr);
+            if (arrOfNum.length !== 0) {
+              h3.style.color = 'Yellow';
+              h3.textContent = `Your array numbers are :- ${arrOfNum}`;
+            }
+          } else {
+            h3.style.color = 'red';
+            h3.textContent = 'Inserted number can not be negative';
+          }
+        } else {
+          h3.style.color = 'red';
+          h3.textContent = 'Please insert number to create array';
+        }
+
+        document.querySelector('.input').value = '';
+      };
+      document.querySelector('.btn').addEventListener('click', createArray);
+      document.querySelector('.btn2').addEventListener('click', (e) => {
+        e.preventDefault();
+        const h3_2 = document.querySelector('.h3_2');
+        if (cubesArr !== undefined) {
+          h3_2.style.color = '#22e9df';
+          h3_2.textContent = `Your filtered odd numbers are ${newArr} and there cubes are ${cubesArr}`;
+        } else {
+          h3_2.style.color = 'red';
+
+          h3_2.textContent = 'There is no filtered array';
+        }
+      });
+    </script>
+  </body>
+</html>
