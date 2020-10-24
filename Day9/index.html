@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 9 by VijayN</title>
     <style>
-        
+      
         body{
             background-color: #203b4d;
             display: flex;
@@ -14,30 +14,51 @@
             min-height: 100vh;
             text-align: center;
         }
-    
-      
+       
+        .btn{
+            padding: 4px 60px;
+            font-size: 1.2rem;
+            background-color: transparent;
+            border: 1px solid #e7da19;
+            color: #e7da19;
+            cursor: pointer;
+            transition: 0.3s ease all;
+        }
+        .btn:hover{
+            background-color: #e7da19;
+            color: crimson;
+        }
+      .btn:focus{
+          outline: none;
+      }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="h1"></h1>
+        <button class="btn">Reload</button>
     </div>
     <script>
-        let num = Number(prompt('Enter a number:-'));
-        const h1 = document.querySelector('.h1');
-        let numArr = [];
-        for (let i = 1; i < 11; i++) {
-            let newNum = num * i;
-            numArr.push(newNum);
+        const getPrompt = () => {
+            let num = Number(prompt('Enter a number:-'));
+            const h1 = document.querySelector('.h1');
+            let numArr = [];
+            for (let i = 1; i < 11; i++) {
+                let newNum = num * i;
+                numArr.push(newNum);
+            }
+            if(num > 0){
+                h1.style.color = '#e7da19'
+                h1.textContent = `Your entered number is ${num} and it's table is ${numArr}.`
+            }else{
+                h1.style.color = 'red'
+                h1.textContent = `Please enter positive numbers only :).`
+            }
         }
-        if(num > 0){
-            h1.style.color = '#e7da19'
-            h1.textContent = `Your entered number is ${num} and it's table is ${numArr}.`
-        }else{
-            h1.style.color = 'red'
-            h1.textContent = `Please enter positive numbers only :).`
-        }
-    
+        document.querySelector('.btn').addEventListener('click', () => {
+            getPrompt();
+        });
+        getPrompt();
     </script>
 </body>
 </html>
