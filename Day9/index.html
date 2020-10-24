@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 by VijayN</title>
+    <style>
+        
+        body{
+            background-color: #203b4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+    
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1"></h1>
+    </div>
+    <script>
+        let num = Number(prompt('Enter a number:-'));
+        const h1 = document.querySelector('.h1');
+        let numArr = [];
+        for (let i = 1; i < 11; i++) {
+            let newNum = num * i;
+            numArr.push(newNum);
+        }
+        if(num > 0){
+            h1.style.color = '#e7da19'
+            h1.textContent = `Your entered number is ${num} and it's table is ${numArr}.`
+        }else{
+            h1.style.color = 'red'
+            h1.textContent = `Please enter positive numbers only :).`
+        }
+    
+    </script>
+</body>
+</html>
